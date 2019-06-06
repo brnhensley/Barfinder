@@ -8,10 +8,8 @@ export class BarFinder
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
-          console.log("OK");
         } else {
           reject(Error(request.statusText));
-          console.log("BOOOO");
         }
       };
       request.open("GET", url, true);

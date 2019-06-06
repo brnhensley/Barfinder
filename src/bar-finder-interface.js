@@ -16,11 +16,17 @@ $(document).ready(function() {
     let promise = barFinder.findBar(city, state);
     promise.then(function(response) {
       let body = JSON.parse(response);
-      body.forEach(function(bar) {
-        $('#showBars').append(`<strong>${bar.name}</strong><br> ${bar.street}, ${bar.city}, ${bar.state}, ${bar.postal_code}<br> ${bar.phone}<br> ${bar.website_url}<hr>`)
-      }, function(error) {
-        $('#showError').text(`There was an error processing your request: ${error.message}`);
-      })
+      console.log(body);
+      if (body.length === 0)
+      {
+        $('#showBars').text(`There are no bars in ${city} ${state}.`)
+      } else {
+        body.forEach(function(bar) {
+          $('#showBars').append(`<strong>${bar.name}</strong><br> ${bar.street}<br>${bar.city}, ${bar.state}, ${bar.postal_code}<br> ${bar.phone}<br> <a href='${bar.website_url}'>${bar.website_url}</a><hr>`)
+        }, function(error) {
+          $('#showError').text(`There was an error processing your request: ${error.message}`);
+        })
+      }
     })
   })
 });
