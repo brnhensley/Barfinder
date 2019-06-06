@@ -2,14 +2,29 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>ProjectName</title>
+  <title>Bar(f)inder</title>
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>ProjectName</h1>
+      <h1>Bar(f)inder</h1>
     </div>
-    <!-- Code goes here -->
+
+    <form id="barSearch" method="post">
+      <input id="city" type="text" name="city">
+      <label for="city">City</label>
+      <input id="state" type="text" name="state">
+      <label for="state">State</label>
+      <button type="submit" name="button">SEARCH</button>
+    </form>
+
+    <div id="showBarName"></div>
+    <div id="showBarAddress"></div>
+    <div id="showBarPhone"></div>
+    <div id="showBarWebsite"></div>
+
+    <div id="showError"></div>
+
   </div>
 </body>
 </html>

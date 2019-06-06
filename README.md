@@ -1,8 +1,8 @@
-# Project Name
+# Bar Finder
 
 #### _JavaScript, 05.31.2019_
 
-#### By _YourNameHere_
+#### By _Marc Davies & Brian Hensley_
 
 ## Description
 
@@ -39,4 +39,4 @@ This application was built in Atom using JavaScript, Node.js 12.3.1, jQuery 3.4.
 
 *This software is licensed under MIT license.*
 
-Copyright (c) 2019 **_YourNameHere_**
+Copyright (c) 2019 **_Marc Davies & Brian Hensley_**
