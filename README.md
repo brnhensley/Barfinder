@@ -1,25 +1,27 @@
 # Bar Finder
 
-#### _JavaScript, 05.31.2019_
+#### _Node.js, 06.06.2019_
 
 #### By _Marc Davies & Brian Hensley_
 
 ## Description
 
-* _This program does things._
-* _This program also does these things._
+* _This program allows users to display bars by searching by city and/or state._
+* _This program makes an API call to https://www.openbrewerydb.org/ to return bars._
 * _See specs below for more detail._
 
 ## Specs
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| If user does this, the program does that | this | that |
-| If user does this, the program does that | this | that |
-| If user does this, the program does that | this | that |
+| If user enters Portland as city and Oregon as state, the program returns a list of bars in Portland, Oregon | City: "Portland" / State: "Oregon" | ![ss1](https://i.imgur.com/2BM8Z1U.jpg) |
+| If user enters Portland as city and nothing as state, the program returns a list of bars in all cities named Portland | City: "Portland" / State: "" | ![ss2](https://i.imgur.com/SkXlFHP.jpg) |
+| If user enters nothing as city and Oregon as state, the program returns a list of bars in all of Oregon | City: "" / State: "Oregon" | ![ss3](https://i.imgur.com/HMPOKeO.jpg) |
+| If user enters a city or state that doesn't exist, the program returns an error message | City: "Portlad" / State: "Oregon" | ![ss4](https://i.imgur.com/QnHrHwo.jpg) |
+
 
 ## Installation and Setup
 * If you don't have it installed, download and install Node.js 12.3.1
-* `$ git clone https://github.com/YourGitHubNameHere/YourGitHubRepositoryNameHere.git` This will clone the repository to your local machine.
+* `$ git clone https://github.com/MarcLignarius/BarFinder` This will clone the repository to your local machine.
 * `$ npm install` This will allow you to have access to the CLI (command line interface) for webpack.
 * `$ npm run build`
 This will automatically build the bundle once. The entry file is `./src/script/index.js`, with production ready code (minified).
@@ -30,10 +32,10 @@ This will watch the file changes in `./src` and automatically build the bundle w
 There are no known bugs as of last update.
 
 ## Support and contact details
-_Please contact me at YourEmailHere@gmail.com if you run into any issues or have questions, ideas or feedback._
+_Please contact us at marcdaviesriot@gmail.com / brnhensley@gmail.com if you run into any issues or have questions, ideas or feedback._
 
 ## Technologies Used
-This application was built in Atom using JavaScript, Node.js 12.3.1, jQuery 3.4.1, Bootstrap v4.3.1 and a custom css file. For unit testing, Jasmine framework and Karma task runner are both used.
+This application was built in Atom using JavaScript, Node.js 12.3.1, API calls, jQuery 3.4.1, Bootstrap v4.3.1, custom css file. For unit testing, Jasmine framework and Karma task runner are both used.
 
 ### License
 

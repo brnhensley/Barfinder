@@ -7,6 +7,7 @@ import './styles.css';
 $(document).ready(function() {
   $('#barSearch').submit(function(event) {
     event.preventDefault();
+    $('#showBars').text("");
     let city = $('#city').val();
     let state = $('#state').val();
     $('#city').val("");
