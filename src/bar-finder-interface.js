@@ -14,16 +14,13 @@ $(document).ready(function() {
     console.log("city" + city + " " + "state" + state);
     let barFinder = new BarFinder;
     let promise = barFinder.findBar(city, state);
-
     promise.then(function(response) {
       let body = JSON.parse(response);
-      console.log(body[0].name);
-      $('#showBarName').html(`${body[0].name}<br>`)
-      $('#showBarAddress').html(`${body[0].street}<br>${body[0].city}, ${body[0].state} ${body[0].postal_code}<br>`)
-      $('#showBarPhone').html(`${body[0].phone}<br>`)
-      $('#showBarWebsite').html(`${body[0].website_url}<br>`)
-    }, function(error) {
-      $('#showError').text(`Everything is fucked! ${error.message}`);
+      body.forEach(function(bar) {
+        $('#showBars').append(`<strong>${bar.name}</strong><br> ${bar.street}, ${bar.city}, ${bar.state}, ${bar.postal_code}<br> ${bar.phone}<br> ${bar.website_url}<hr>`)
+      }, function(error) {
+        $('#showError').text(`There was an error processing your request: ${error.message}`);
+      })
     })
   })
 });
